@@ -11,9 +11,9 @@ public class Aluno {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nome;
+    private String nomealuno;
 
-    private Long cursoID;
+    private Curso curso;
 
     public Long getId() {
         return id;
@@ -24,19 +24,11 @@ public class Aluno {
     }
 
     public String getNome() {
-        return nome;
+        return nomealuno;
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public Long getCursoID() {
-        return cursoID;
-    }
-
-    public void setCursoID(Long cursoID) {
-        this.cursoID = cursoID;
+        this.nomealuno = nome;
     }
 
     @Override
