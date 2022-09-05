@@ -13,6 +13,8 @@ public class Aluno {
 
     private String nomealuno;
 
+    @ManyToOne
+    @JoinColumn(name="cursoid")
     private Curso curso;
 
     public Long getId() {
@@ -29,6 +31,14 @@ public class Aluno {
 
     public void setNome(String nome) {
         this.nomealuno = nome;
+    }
+
+    public Curso getCurso() {
+        return curso;
+    }
+
+    public void setCurso(Curso curso) {
+        this.curso = curso;
     }
 
     @Override
